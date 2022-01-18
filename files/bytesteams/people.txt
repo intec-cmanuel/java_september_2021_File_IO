@@ -1,0 +1,1 @@
+Person{name='Jean-Pierre', age=55, mood='happy'}

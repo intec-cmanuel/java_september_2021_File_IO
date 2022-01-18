@@ -27,24 +27,23 @@ public class IOProcessingStreamApp {
     }
 
     private static void writeDataToFile(Path path) {
-        try (FileWriter fileWriter = new FileWriter(path.toFile())) {
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+        try (FileWriter fileWriter = new FileWriter(path.toFile());
+             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
             bufferedWriter.write("Bonjour");
             bufferedWriter.write("Gutentag");
-            bufferedWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     private static void readDataFromFile(Path path) {
-        try (FileReader fileReader = new FileReader(path.toFile())) {
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
+        try (FileReader fileReader = new FileReader(path.toFile());
+             BufferedReader bufferedReader = new BufferedReader(fileReader)) {
+
             String line;
             while( (line = bufferedReader.readLine()) != null) {
                 System.out.println(line);
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
