@@ -14,7 +14,7 @@ public class IOProcessingStreamApp {
         readDataFromFile(path);
     }
 
-    private static void createFile(Path path) {
+    public static void createFile(Path path) {
         try {
             Files.createDirectories(path.getParent());
 
