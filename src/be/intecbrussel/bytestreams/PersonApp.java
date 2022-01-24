@@ -23,14 +23,14 @@ public class PersonApp {
         }
 
         // WRITE PERSON TO FILE
-//        try (FileOutputStream fileOutputStream = new FileOutputStream(path.toFile());
-//        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
-//
-//            objectOutputStream.writeObject(person);
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        try (FileOutputStream fileOutputStream = new FileOutputStream(path.toFile());
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
+
+            objectOutputStream.writeObject(person);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         // READ PERSON TO FILE
         try (FileInputStream fileInputStream = new FileInputStream(path.toFile());

@@ -31,7 +31,7 @@ public class Exercise2 {
 
     private static void writeDataToFile(Path path) {
         try (FileWriter fileWriter = new FileWriter(path.toFile(),true);
-        BufferedWriter bufferedWriter = Files.newBufferedWriter(path, StandardOpenOption.APPEND)) {
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
 
 //            path.toFile().setReadOnly();
 
